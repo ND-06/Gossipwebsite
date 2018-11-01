@@ -1,0 +1,15 @@
+<h1> This is the gossip !</h1>
+
+<div class="card">
+  <div class="card-body">
+    <%= @gossip.title %>
+    <%= @gossip.content %>
+    <%= @gossip.anonymous_gossiper %>
+    <%= @gossip.created_at %>
+  </div>
+</div>
+<br>
+<%= link_to 'Click to delete', gossip_path(@gossip), method: :delete %>
+ 
+
+

@@ -1,0 +1,15 @@
+
+<h1 class='jf'> You can find all gossips in this page ! </h1>
+
+<% @gossip.each.with_index(1) do |g,index|%> 
+<div class="card" style="width: 25rem;">
+  <div class="card-body">
+    <h5 class="card-title">Gossip number <%= index %></h5>
+    <p class="card-text"><%= g.title %> : <%= g.content 
+    %> : <%= g.anonymous_gossiper %></p></p>
+    <a href="/gossips/<%= index %>" class="btn btn-primary">Show me more Dude !</a>
+  </div>
+</div>
+<% end %>
+
+	

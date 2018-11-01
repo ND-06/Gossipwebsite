@@ -1,0 +1,10 @@
+<h1>Edit your gossip !</h1>
+
+<div class="form"> 
+ <%= form_for @gossip do |f| %>
+ <p>Modify the title !<%= f.text_field :title %></p>
+ <p>Modify the gossip content !<%= f.text_area :content, size: "30x12" %></p>
+ <p>Modify your gossiper pseudo !<br> <%= f.text_field :anonymous_gossiper %></p>
+  <%= f.submit "Modify the gossip" %>
+<%end%>
+
