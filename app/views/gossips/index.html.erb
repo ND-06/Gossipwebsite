@@ -6,15 +6,17 @@
 
 <% @gossip.each do |g|%> 
 
-<div class="card" style="width: 32rem;">
+<div class="card" style="width: 30rem;">
   <div class="card-body">
-    <h5 class="card-title">Gossip number <%= g.id %></h5>
-    <p class="card-text"><%= g.title %> : <%= g.content 
-    %> : <%= g.anonymous_gossiper %></p></p>
+    <h5 class="card-title"><strong>Gossip number <%= g.id %></strong></h5>
+    <p class="card-text"> Title : <%= g.title %> <br> 
+    Content	: <%= g.content 
+    %> <br> Author : <%= g.anonymous_gossiper %></p></p>
     <a href="/gossips/<%= g.id %>" class="btn btn-primary">View this Gossip</a>
     <a href="gossips/<%= g.id %>/edit" class="btn btn-primary">Edit this Gossip</a>  
   </div>
 </div>
+<br>
 <% end %>
 
 	

@@ -16,8 +16,9 @@
   	   <h3>Add a Comment:</h3>
   	   <%= render 'comments/form' %>
 </div>
-<br>
-<%= link_to 'Click to delete', gossip_path(@gossip), method: "delete" %>
+<div class="delete"><%= link_to 'Click to delete', gossip_path(@gossip), method: "delete" %> 
+</div>
+
  
 
 

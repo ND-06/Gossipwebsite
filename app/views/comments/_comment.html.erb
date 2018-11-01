@@ -1,3 +1,8 @@
-<%= comment.anonymous_commentor %>
-<%= comment.content %>
-<%= time_ago_in_words(comment.created_at) %>
+<hr>
+<ul>
+
+<p>Author : <%= comment.anonymous_commentor %>
+<li><%= comment.content %></li>
+<p>posted <%= time_ago_in_words(comment.created_at) %> ago</p>
+</ul>
+<hr>

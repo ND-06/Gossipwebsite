@@ -1,9 +1,10 @@
 body {
     margin-top: 0px !important;
+    margin-bottom: 10px !important;
     color: white;
     background-color: #1479a8;
     font-family: Palatino;
-    font-size: 1.5em;
+    font-size: 1.25em;
 }
 
 
@@ -56,6 +57,17 @@ font-family: Palantino;
 
 }
 
+.delete
+{
+text-align: center;	
+font-size: 1.5em;
+}
+
+.card 
+{
+display: flex;
+flex-direction: row;	
+}
 
 a
 {
@@ -67,4 +79,12 @@ color: orange;
 text-align: center;
 
 }
+
+h1,h2,h3 
+{
+text-align: center;	
+}
+
+
+
 

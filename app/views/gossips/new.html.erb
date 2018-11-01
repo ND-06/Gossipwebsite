@@ -1,10 +1,13 @@
-<h1>It's your turn to create a gossip Dude !</h1>
+<h1>Let's create your own Gossip</h1>
 
 <div class="form"> 
  <%= form_for @gossip do |f| %>
- <p>Give a title to your gossip !<%= f.text_field :title %></p>
- <p>Write your gossip content !<%= f.text_area :content, size: "60x12" %></p>
- <p>Write your gossiper pseudo !<br> <%= f.text_field :anonymous_gossiper %></p>
+ <p>Title<%= f.text_field :title %></p>
+ <br>
+ <p>Content<%= f.text_area :content, size: "20x5" %></p>
+ <br>
+ <p>Pseudo<%= f.text_field :anonymous_gossiper %></p>
+ <br>
   <%= f.submit "Create a new gossip" %>
 <%end%>
 
