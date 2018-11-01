@@ -31,10 +31,8 @@ class GossipsController < ApplicationController
   def destroy
     @gossip = Gossip.find(params[:id])
     @gossip.destroy
-    if @gossip.present?
-    redirect_to gossip_path
+    redirect_to gossips_path
   end  
 end
 
   
-end

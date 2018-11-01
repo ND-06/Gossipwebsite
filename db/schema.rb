@@ -10,16 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_31_200104) do
+ActiveRecord::Schema.define(version: 2018_11_01_160933) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "comments", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "gossip_id"
     t.text "content"
     t.string "anonymous_commentor"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["gossip_id"], name: "index_comments_on_gossip_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
   create_table "gossips", force: :cascade do |t|
@@ -33,11 +37,16 @@ ActiveRecord::Schema.define(version: 2018_10_31_200104) do
   create_table "gossips_tags", id: false, force: :cascade do |t|
     t.bigint "gossip_id", null: false
     t.bigint "tag_id", null: false
+    t.index ["gossip_id", "tag_id"], name: "index_gossips_tags_on_gossip_id_and_tag_id"
+    t.index ["tag_id", "gossip_id"], name: "index_gossips_tags_on_tag_id_and_gossip_id"
   end
 
   create_table "likes", force: :cascade do |t|
+    t.string "likeable_type"
+    t.bigint "likeable_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["likeable_type", "likeable_id"], name: "index_likes_on_likeable_type_and_likeable_id"
   end
 
   create_table "tags", force: :cascade do |t|
